@@ -43,6 +43,8 @@ export default class Chart extends Component<void, any, any> {
 		horizontalScale: 1,
 		labelFontSize: 10,
 		lineWidth: 1,
+		hideXAxis: false,
+		hideYAxis: false,
 		showAxis: true,
 		showDataPoint: false,
 		showGrid: true,
@@ -158,18 +160,20 @@ export default class Chart extends Component<void, any, any> {
 								onLayout={this._onContainerLayout}
 							>
 								<View style={[styles.default, { flexDirection: 'row' }]}>
-									<View ref="yAxis">
-										<YAxis
-											{...this.props}
-											data={this.props.data}
-											height={this.state.containerHeight - this.props.xAxisHeight}
-											width={this.props.yAxisWidth}
-											minVerticalBound={this.state.bounds.min}
-											containerWidth={this.state.containerWidth}
-											maxVerticalBound={this.state.bounds.max}
-											style={{ width: this.props.yAxisWidth }}
-										/>
-									</View>
+									{ !this.props.hideYAxis &&
+										<View ref="yAxis">
+											<YAxis
+												{...this.props}
+												data={this.props.data}
+												height={this.state.containerHeight - this.props.xAxisHeight}
+												width={this.props.yAxisWidth}
+												minVerticalBound={this.state.bounds.min}
+												containerWidth={this.state.containerWidth}
+												maxVerticalBound={this.state.bounds.max}
+												style={{ width: this.props.yAxisWidth }}
+											/>
+										</View>
+									}
 									<ChartType
 										{...this.props}
 										data={this.props.data}
@@ -179,7 +183,8 @@ export default class Chart extends Component<void, any, any> {
 										maxVerticalBound={this.state.bounds.max}
 									/>
 								</View>
-								{(() => {
+								{ !this.props.hideXAxis && (() => {
+									console.log('hidddxxxx');
 									return (
 										<View ref="xAxis">
 											<XAxis

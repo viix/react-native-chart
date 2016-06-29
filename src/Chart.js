@@ -160,7 +160,7 @@ export default class Chart extends Component<void, any, any> {
 								onLayout={this._onContainerLayout}
 							>
 								<View style={[styles.default, { flexDirection: 'row' }]}>
-									{ !this.props.hideYAxis &&
+									{!this.props.hideYAxis &&
 										<View ref="yAxis">
 											<YAxis
 												{...this.props}
@@ -183,8 +183,7 @@ export default class Chart extends Component<void, any, any> {
 										maxVerticalBound={this.state.bounds.max}
 									/>
 								</View>
-								{ !this.props.hideXAxis && (() => {
-									console.log('hidddxxxx');
+								{!this.props.hideXAxis && (() => {
 									return (
 										<View ref="xAxis">
 											<XAxis
@@ -262,6 +261,8 @@ Chart.propTypes = {
 	hideVerticalGridLines: PropTypes.bool,
 	// labelFontSize: PropTypes.number,
 	showAxis: PropTypes.bool,
+	hideXAxis: PropTypes.bool,
+	hideYAxis: PropTypes.bool,
 	showGrid: PropTypes.bool,
 	showXAxisLabels: PropTypes.bool,
 	showYAxisLabels: PropTypes.bool,

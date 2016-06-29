@@ -184,16 +184,15 @@ maxVerticalBound:_this2.state.bounds.max,__source:{fileName:_jsxFileName,lineNum
 
 
 !_this2.props.hideXAxis&&function(){
-console.log('hidddxxxx');
 return(
-_react2.default.createElement(_reactNative.View,{ref:'xAxis',__source:{fileName:_jsxFileName,lineNumber:189}},
+_react2.default.createElement(_reactNative.View,{ref:'xAxis',__source:{fileName:_jsxFileName,lineNumber:188}},
 _react2.default.createElement(_xAxis2.default,_extends({},
 _this2.props,{
 width:_this2.state.containerWidth-_this2.props.yAxisWidth,
 data:_this2.props.data,
 height:_this2.props.xAxisHeight,
 align:axisAlign,
-style:{marginLeft:_this2.props.yAxisWidth-1},__source:{fileName:_jsxFileName,lineNumber:190}}))));}()));}
+style:{marginLeft:_this2.props.yAxisWidth-1},__source:{fileName:_jsxFileName,lineNumber:189}}))));}()));}
 
 
 
@@ -205,13 +204,13 @@ return(
 _react2.default.createElement(_reactNative.View,{
 ref:'container',
 onLayout:_this2._onContainerLayout,
-style:[_this2.props.style||{},styles.default],__source:{fileName:_jsxFileName,lineNumber:205}},
+style:[_this2.props.style||{},styles.default],__source:{fileName:_jsxFileName,lineNumber:204}},
 
 _react2.default.createElement(ChartType,_extends({},
 _this2.props,{
 width:_this2.state.containerWidth,
 height:_this2.state.containerHeight,
-data:_this2.props.data,__source:{fileName:_jsxFileName,lineNumber:210}}))));}()));}}]);return Chart;}(_react.Component);Chart.defaultProps={data:[],animationDuration:0.5,axisColor:C.BLACK,axisLabelColor:C.BLACK,axisLineWidth:1,axisTitleColor:C.GREY,axisTitleFontSize:16,chartFontSize:14,dataPointRadius:3,gridColor:C.BLACK,gridLineWidth:0.5,hideHorizontalGridLines:false,hideVerticalGridLines:false,horizontalScale:1,labelFontSize:10,lineWidth:1,hideXAxis:false,hideYAxis:false,showAxis:true,showDataPoint:false,showGrid:true,showXAxisLabels:true,showYAxisLabels:true,tightBounds:false,verticalGridStep:4,xAxisHeight:20,yAxisWidth:30};exports.default=Chart;
+data:_this2.props.data,__source:{fileName:_jsxFileName,lineNumber:209}}))));}()));}}]);return Chart;}(_react.Component);Chart.defaultProps={data:[],animationDuration:0.5,axisColor:C.BLACK,axisLabelColor:C.BLACK,axisLineWidth:1,axisTitleColor:C.GREY,axisTitleFontSize:16,chartFontSize:14,dataPointRadius:3,gridColor:C.BLACK,gridLineWidth:0.5,hideHorizontalGridLines:false,hideVerticalGridLines:false,horizontalScale:1,labelFontSize:10,lineWidth:1,hideXAxis:false,hideYAxis:false,showAxis:true,showDataPoint:false,showGrid:true,showXAxisLabels:true,showYAxisLabels:true,tightBounds:false,verticalGridStep:4,xAxisHeight:20,yAxisWidth:30};exports.default=Chart;
 
 
 
@@ -262,6 +261,8 @@ hideHorizontalGridLines:_react.PropTypes.bool,
 hideVerticalGridLines:_react.PropTypes.bool,
 // labelFontSize: PropTypes.number,
 showAxis:_react.PropTypes.bool,
+hideXAxis:_react.PropTypes.bool,
+hideYAxis:_react.PropTypes.bool,
 showGrid:_react.PropTypes.bool,
 showXAxisLabels:_react.PropTypes.bool,
 showYAxisLabels:_react.PropTypes.bool,
